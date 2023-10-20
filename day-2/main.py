@@ -1,7 +1,7 @@
 
-def challenge_1():
+def challenge_1(a):
     '''Print sum of the digits of a two-digit number'''
-    two_digit_number = input()
+    two_digit_number = input() or a
     return int(two_digit_number[0]) + int(two_digit_number[1])
 
 def challenge_2(a, b):
@@ -21,8 +21,8 @@ def challenge_3(a):
     '''Life in Weeks'''
     WEEKS_IN_A_YEAR = 52
     AVG_LIFESPAN = 90
-    age = input() or a
-    weeks_left = (AVG_LIFESPAN - int(age)) * WEEKS_IN_A_YEAR
+    age = int(input() or a)
+    weeks_left = (AVG_LIFESPAN - age) * WEEKS_IN_A_YEAR
     return f"You have {weeks_left} weeks left."
 
 def boss_challenge(a, b, c):
@@ -38,7 +38,8 @@ def boss_challenge(a, b, c):
 
 if __name__ == "__main__":
     # challenge 1
-    # print(challenge_1())
+    # input_1 = 57
+    # print(challenge_1(input_1))
     # print(3 * (3 + 3) / 3 - 3)
     
     # challenge 2
